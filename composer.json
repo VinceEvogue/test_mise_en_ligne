@@ -80,7 +80,7 @@
         "post-update-cmd": [
             "@auto-scripts"
         ],
-        "compile": [
+        "post-create-project-cmd": [
             "php bin/console doctrine:migrations:migrate --no-interaction"
         ]
     },
@@ -91,11 +91,7 @@
         "symfony": {
             "allow-contrib": false,
             "require": "6.3.*"
-        },
-        "paas": {
-            "compile": [
-                "php bin/console doctrine:migrations:migrate --no-interaction"
-        ]
+        }
     },
     "require-dev": {
         "doctrine/doctrine-fixtures-bundle": "^3.4",
